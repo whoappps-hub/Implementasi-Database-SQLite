@@ -31,7 +31,6 @@ class _ListUserPageState extends State<ListUserPage> {
     {"id": 4, "nama": "Empat", "Umur": 40},
   ];
 
-  // ================= FORM =================
   void _form(int? id) {
     if (id != null) {
       var user = userList.firstWhere(
@@ -79,7 +78,6 @@ class _ListUserPageState extends State<ListUserPage> {
     );
   }
 
-  // ================= SAVE =================
   void _save(int? id, String nama, int umur) {
     if (id != null) {
       var user = userList.firstWhere((user) => user['id'] == id);
@@ -97,10 +95,9 @@ class _ListUserPageState extends State<ListUserPage> {
       });
     }
 
-    Navigator.pop(context); // tutup modal setelah save
+    Navigator.pop(context);
   }
 
-  // ================= DELETE =================
   void _delete(int id) {
     showDialog(
       context: context,
@@ -126,7 +123,6 @@ class _ListUserPageState extends State<ListUserPage> {
     );
   }
 
-  // ================= UI =================
   @override
   Widget build(BuildContext context) {
     return Scaffold(
